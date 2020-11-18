@@ -1,0 +1,6 @@
+.titletext{
+    grid-area: ht;
+    background-color: #4682B4;
+    padding: 30px;
+    color: #B0C4DE;
+}

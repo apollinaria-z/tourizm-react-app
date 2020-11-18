@@ -9,12 +9,14 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import {BrowserRouter, Route} from "react-router-dom";
+import TitleText from './components/Header/TitleText';
 
 const App = () => {
   return (
   <BrowserRouter>
     <div className='app-wrapper'>
         <Header />
+        <TitleText />
         <Navbar />
         <div class='app-wrapper-content'>
             <Route path='/dialogs' component={Dialogs}/>
