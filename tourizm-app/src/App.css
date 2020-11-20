@@ -7,7 +7,7 @@
     "sd con";
 
   grid-template-rows: 120px 400px;
-  grid-template-columns: 140px 10fr;
+  grid-template-columns: 200px 10fr;
 }
 
 .app-wrapper-content {

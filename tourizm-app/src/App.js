@@ -5,11 +5,13 @@ import Sidebar from './components/Sidebar/Sidebar';
 import MainPage from './components/MainPage/MainPage';
 import LogIn from './components/LogIn/LogIn';
 import Registration from './components/Registration/Registration';
-import { BrowserRouter, Route } from 'react-router-dom';
+import OfferList from './components/Offers/OfferList';
+import CustomerList from './components/Customers/CustomerList';
+import { Route } from 'react-router-dom';
 
-function App() {
+const App = (props) => {
   return (
-  <BrowserRouter>
+
     <div className='app-wrapper'>
         <Header />
         <Sidebar />
@@ -18,9 +20,15 @@ function App() {
                     <Route path='/mainpage' component={MainPage}/>
                     <Route path='/login' component={LogIn}/>
                     <Route path='/registration' component={Registration}/>
+                    <Route path='/customerlist'
+                           render={() => <
+                                      CustomerList customerData={props.state.customerData}/>}/>
+                      <Route path='/offerlist'
+                            render={() => <
+                                     OfferList offerData={props.state.offerData}/>}/>
         </div>
     </div>
-  </BrowserRouter>
+
   );
 }
 

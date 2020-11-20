@@ -15,6 +15,13 @@ const Sidebar = () => {
               <NavLink to="/registration" activeClassName={s.activeLink}>Registration</NavLink>
            </div>
 
+            <div className={s.item}>
+               <NavLink to="/customerlist" activeClassName={s.activeLink}>Our dear customers</NavLink>
+             </div>
+                <div className={s.item}>
+                   <NavLink to="/offerlist" activeClassName={s.activeLink}>Our offers</NavLink>
+            </div>
+
     </nav>
     );
 }
