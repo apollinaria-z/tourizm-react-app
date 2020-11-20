@@ -1,5 +1,6 @@
 import React from 'react';
 import Offer from './Offer';
+import s from './Offer.module.css';
 
 const OfferList = (props) => {
 
@@ -10,7 +11,10 @@ const OfferList = (props) => {
                                     price={data.price}/>);
 
     return (
+    <div>
+        <div className={s.styles}>Offers:</div>
         <div> {allOffers} </div>
+    </div>
     );
 }
 

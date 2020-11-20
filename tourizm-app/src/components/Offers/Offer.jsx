@@ -1,13 +1,10 @@
 import React from 'react';
-
-const styles = {
-    color: '#66CDAA'
-    }
+import s from './Offer.module.css';
 
 const Offer = (props) => {
 
         return(
-        <ul style={styles}>
+        <ul className={s.styles}>
              {props.id + '. ' + props.country + ': price $ ' + props.price}
         </ul>
         )
