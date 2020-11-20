@@ -8,26 +8,29 @@ import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import {BrowserRouter, Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import TitleText from './components/Header/TitleText';
 
 const App = (props) => {
 
   return (
-  <BrowserRouter>
+
     <div className='app-wrapper'>
         <Header />
         <TitleText />
         <Navbar />
         <div class='app-wrapper-content'>
-            <Route path='/dialogs' render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>}/>
-            <Route path='/profile' render={() => <Profile postsData={props.postsData}/>}/>
+            <Route path='/dialogs'
+                    render={() => <
+                        Dialogs state={props.state.dialogPage}/>}/>
+            <Route path='/profile'
+                    render={() => <
+                        Profile state={props.state.profilePage}/>}/>
             <Route path='/news' component={News}/>
             <Route path='/music' component={Music}/>
             <Route path='/settings' component={Settings}/>
         </div>
     </div>
-  </BrowserRouter>
   );
 }
 
