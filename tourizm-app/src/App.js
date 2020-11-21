@@ -19,10 +19,11 @@ const App = (props) => {
         <div class='app-wrapper-content'>
                     <Route path='/mainpage' component={MainPage}/>
                     <Route path='/login' component={LogIn}/>
-                    <Route path='/registration' component={Registration}/>
+                    <Route path='/registration' render={() =>
+                                                <Registration registerCustomer={props.registerCustomer}/>}/>
                     <Route path='/customerlist'
-                           render={() => <
-                                      CustomerList customerData={props.state.customerData}/>}/>
+                           render={() => <CustomerList
+                                      customerData={props.state.customerData} />}/>
                       <Route path='/offerlist'
                             render={() => <
                                      OfferList offerData={props.state.offerData}/>}/>

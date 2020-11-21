@@ -1,3 +1,4 @@
+import {rerenderEntireTree} from '../render';
 
 let state = {
     customerData: [
@@ -11,6 +12,16 @@ let state = {
                 {id: 3, country: "Peru", price: 1230},
                 {id: 4, country: "Grand Canaria", price: 1110}
                 ]
+  }
+
+  export let registerCustomer = (customer) => {
+    let newCustomer = {
+        id: 4,
+        login: customer.login,
+        name: customer.name,
+    };
+    state.customerData.push(newCustomer);
+    rerenderEntireTree(state);
   }
 
 export default state;

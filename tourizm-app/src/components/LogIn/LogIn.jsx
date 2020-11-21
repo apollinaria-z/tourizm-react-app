@@ -14,9 +14,9 @@ const LogIn = () => {
             <h3>Login area</h3>
 
             <textarea ref={newCustomer}></textarea>
-            <h4>enter your login</h4>
+            <h5>enter your login</h5>
             <textarea></textarea>
-            <h4>enter your password</h4>
+            <h5>enter your password</h5>
             <button onClick={addCustomer}>Log in customer</button>
         </div>
     );

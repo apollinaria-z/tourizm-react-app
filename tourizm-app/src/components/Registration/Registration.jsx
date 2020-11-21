@@ -1,12 +1,20 @@
 import React from 'react';
 
-const Registration = () => {
+const Registration = (props) => {
 
-    let newCustomer = React.createRef();
+    let newCustomerLogin = React.createRef();
+    let newCustomerName = React.createRef();
 
-    let addCustomer = () => {
-           let text = newCustomer.current.value;
-           alert(text  + ' was added to customer base.');
+    let registerCustomer = () => {
+           let newlogin = newCustomerLogin.current.value;
+           let newname = newCustomerName.current.value;
+           let newCustomer = {
+                   login: newlogin,
+                   name: newname,
+               };
+           props.registerCustomer(newCustomer);
+           newCustomerLogin.current.value = '';
+           newCustomerName.current.value = '';
     }
 
     return(
@@ -14,11 +22,13 @@ const Registration = () => {
         <div>
              <h3>Registration area</h3>
 
-             <textarea ref={newCustomer}></textarea>
+             <textarea ref={newCustomerLogin}></textarea>
              <h4>enter new login</h4>
+             <textarea ref={newCustomerName}></textarea>
+             <h4>enter new name</h4>
              <textarea></textarea>
              <h4>enter new password</h4>
-             <button onClick={addCustomer}>Register customer</button>
+             <button onClick={registerCustomer }>Register customer</button>
         </div>
     );
 }

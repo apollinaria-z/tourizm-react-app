@@ -2,11 +2,11 @@ import React from 'react';
 
 const MainPage = () => {
 
-    let loginClick = () => {
-
+    const loginClick = () => {
+        //window.location.assign('http://localhost:3001/login');
     }
     let registerClick = () => {
-
+        //window.location.assign('http://localhost:3001/registration');
     }
 
     return(
