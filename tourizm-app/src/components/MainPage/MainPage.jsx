@@ -3,15 +3,15 @@ import React from 'react';
 const MainPage = () => {
 
     const loginClick = () => {
-        //window.location.assign('http://localhost:3001/login');
+        document.location.href = "/login";
     }
     let registerClick = () => {
-        //window.location.assign('http://localhost:3001/registration');
+        document.location.href = "/registration";
     }
 
     return(
         <div>
-            <div>You can watch our tourist offers after log in or registration</div>
+            <h4>You can watch our tourist offers after log in or registration</h4>
             <div>
                 <button onClick={loginClick}>LogIn Page</button>
                 <button onClick={registerClick}>Registration Page</button>
