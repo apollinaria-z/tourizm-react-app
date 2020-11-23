@@ -2,10 +2,6 @@ import React from 'react';
 
 const Registration = (props) => {
 
-    /*const afterRegisterClick = () => {
-            document.location.href = "/customerlist";
-        }*/
-
     let newCustomerLogin = React.createRef();
     let newCustomerName = React.createRef();
 
@@ -19,7 +15,7 @@ const Registration = (props) => {
            props.registerCustomer(newCustomer);
            newCustomerLogin.current.value = '';
            newCustomerName.current.value = '';
-          // afterRegisterClick();
+
     }
 
     return(
