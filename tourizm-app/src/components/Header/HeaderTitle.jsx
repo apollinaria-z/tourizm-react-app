@@ -4,7 +4,7 @@ import s from './HeaderTitle.module.css';
 const HeaderTitle = () => {
     return(
     <div className={s.titletext}>
-            <h2> Welcome to our tourist agency</h2>
+            <h2> Welcome to our tourist agency (version 1)</h2>
     </div>
     );
 }
