@@ -3,8 +3,9 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import MainPage from './components/MainPage/MainPage';
-import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import LogIn from './components/LogInPage/LogIn';
+import Registration from './components/Registration/Registration';
+import OffersPage from './components/Offers/OffersPage';
 import { Route } from "react-router-dom";
 import TitleText from './components/Header/TitleText';
 
@@ -18,14 +19,17 @@ const App = (props) => {
         <Navbar />
         <div className='app-wrapper-content'>
              <Route path='/mainpage' component={MainPage}/>
-            <Route path='/dialogs'
-                    render={() => <
-                        Dialogs store={props.store} state={props.state.dialogPage}/>}/>
-            <Route path='/profile'
-                    render={() => <Profile
-                                    profilePage={props.state.profilePage}
+             <Route path='/registration'
+                    render={() => <Registration
+                                    registrationPage={props.state.registrationPage}
                                     dispatch={props.dispatch}
                                     />}/>
+            <Route path='/loginpage' component={LogIn}/>
+            <Route path='/offers'
+                                render={() => <
+                                   OffersPage offerPage={props.state.offerPage}
+                                              dispatch={props.dispatch}/>}
+                                  />
         </div>
     </div>
   );

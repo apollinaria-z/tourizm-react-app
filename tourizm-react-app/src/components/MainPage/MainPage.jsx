@@ -3,7 +3,7 @@ import React from 'react';
 const MainPage = () => {
 
     const loginClick = () => {
-        document.location.href = "/login";
+        document.location.href = "/loginpage";
     }
     let registerClick = () => {
         document.location.href = "/registration";
