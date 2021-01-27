@@ -26,9 +26,9 @@ const App = (props) => {
                                     />}/>
             <Route path='/loginpage' component={LogIn}/>
             <Route path='/offers'
-                                render={() => <
+                     render={() => <
                                    OffersPage offerPage={props.state.offerPage}
-                                              dispatch={props.dispatch}/>}
+                                   dispatch={props.dispatch}/>}
                                   />
         </div>
     </div>
